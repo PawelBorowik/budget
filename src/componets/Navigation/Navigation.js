@@ -8,7 +8,7 @@ const Navigation= ({ items })=>{
     return(
         <Wrapper>
              <Conteiner>
-                 <List>
+                 <List key={item.to}>
                      {items.map(item=> (
                          <li>
                              <Link to={item.to}>{item.content}</Link>
