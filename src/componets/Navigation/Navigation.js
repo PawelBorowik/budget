@@ -5,18 +5,18 @@ import { Conteiner,List } from './Navigation.css.js'
 
 const Navigation= ({ items})=>{
     return(
-    <Conteiner>
         <Wrapper>
-            <List>
-                {items.map(item=> (
-                    <li>
-                        <a>{item.content}</a>
-                    </li>
-                ))}
+             <Conteiner>
+                 <List>
+                     {items.map(item=> (
+                         <li>
+                             <a>{item.content}</a>
+                        </li>
+                     ))}
 
-            </List>
+                </List>
+            </Conteiner>
         </Wrapper>
-    </Conteiner>
     )
 
 }
