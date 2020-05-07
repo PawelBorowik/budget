@@ -17,12 +17,14 @@ function App() {
       <GlobalStyle/>
          <Router>
             <Navigation items={
+              [
               {content: 'Homepage', to:'/'},
               {content: 'Budget', to:'/budget'}
+              ]
             }/>
 
             <Switch>
-            <Route exact path="/">
+                <Route exact path="/">
                   Home 
                 </Route>
                 <Route path="/budget">
