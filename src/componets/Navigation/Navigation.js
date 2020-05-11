@@ -1,23 +1,25 @@
 import React from "react"
-import {Wrapper} from 'componets'
-import {Conteiner,List} from './Navigation.css.js'
+
+import {Conteiner, NavigationWrapper, List} from './Navigation.css.js'
 import {Link} from "react-router-dom";
 
 
-const Navigation= ({ items })=>{
+const Navigation= ({ items = [], RightElement })=>{
     return(
-        <Wrapper>
-             <Conteiner>
-                 <List key={item.to}>
+       
+        <Conteiner>
+             <NavigationWrapper>
+                 <List >
                      {items.map(item=> (
-                         <li>
+                         <li key={item.to}>
                              <Link to={item.to}>{item.content}</Link>
                         </li>
                      ))}
 
                 </List>
-            </Conteiner>
-        </Wrapper>
+                {RightElement}
+            </NavigationWrapper>
+        </Conteiner>
     )
 
 }

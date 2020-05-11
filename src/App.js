@@ -2,7 +2,7 @@ import React from 'react';
 import {ThemeProvider} from "styled-components";
 import  theme from 'style/theme'
 import  GlobalStyle from './index.css'
-import {Navigation} from "componets"
+import {Navigation, Wrapper} from "componets"
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,17 +12,26 @@ import {
 
 
 function App() {
+
+  
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle/>
          <Router>
             <Navigation items={
-              [
-              {content: 'Homepage', to:'/'},
-              {content: 'Budget', to:'/budget'}
-              ]
-            }/>
-
+                [
+                  {content: 'Homepage', to:'/'},
+                  {content: 'Budget', to:'/budget'}
+                ]}
+              RightElement={(
+                <div>
+                  <button>pl</button>
+                  <button>en</button>
+                </div>
+              )}
+            
+            />
+        <Wrapper>
             <Switch>
                 <Route exact path="/">
                   Home 
@@ -31,6 +40,7 @@ function App() {
                   Budget
                 </Route>
             </Switch>
+            </Wrapper>
         </Router>
   
     </ThemeProvider>
