@@ -2,7 +2,7 @@ import React from 'react';
 import {ThemeProvider} from "styled-components";
 import  theme from 'style/theme'
 import  GlobalStyle from './index.css'
-import {Navigation, Wrapper} from "componets"
+import {Navigation, Wrapper, Button} from "componets"
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,12 +25,11 @@ function App() {
                 ]}
               RightElement={(
                 <div>
-                  <button>pl</button>
-                  <button>en</button>
+                  <Button type="Regular">pl</Button>
+                  <Button type="Regular">en</Button>
                 </div>
               )}
-            
-            />
+            B            />
         <Wrapper>
             <Switch>
                 <Route exact path="/">
